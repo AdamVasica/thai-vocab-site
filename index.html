@@ -3,23 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thai Vocab</title>
-<meta name="description" content="Thai Vocab — learn the Thai words you actually need, with real audio.">
+<title>Dailyvokab: Learn Thai Words</title>
+<meta name="description" content="Dailyvokab is an iPhone app for learning Thai words and phrases for daily life, with flashcards, audio and a quick quiz. The audio is an AI voice.">
+<link rel="canonical" href="https://adamvasica.github.io/thai-vocab-site/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dailyvokab">
+<meta property="og:title" content="Dailyvokab: Learn Thai Words">
+<meta property="og:description" content="Learn the Thai you need for daily life: over 2,000 words and phrases with flashcards, audio and a quick quiz. For iPhone.">
+<meta property="og:url" content="https://adamvasica.github.io/thai-vocab-site/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
-  :root { --ink: #2b2118; --muted: #6f6257; --paper: #f5efe3; --accent: #c8781b; }
+  :root { --ink: #2b2118; --muted: #6f6257; --paper: #f5efe3; --card: #ffffff; --accent: #c8781b; --line: #e6dccb; }
+  * { box-sizing: border-box; }
   body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 72px 20px; }
-  h1 { font-size: 34px; margin: 0 0 8px; }
-  p { color: var(--muted); margin: 0 0 14px; }
-  a { color: var(--accent); }
-  @media (prefers-color-scheme: dark) { :root { --ink: #f1e9dc; --muted: #b3a695; --paper: #1e1915; --accent: #e59a3c; } }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 20px 80px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin: 0 0 28px; font-size: 20px; font-weight: 700; }
+  .brand svg { width: 40px; height: 40px; flex: none; }
+  h1 { font-size: 36px; line-height: 1.15; margin: 0 0 14px; }
+  .lede { font-size: 19px; color: var(--muted); margin: 0 0 18px; }
+  .soon { display: inline-block; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 6px 14px; font-size: 15px; margin: 0 0 8px; }
+  h2 { font-size: 20px; margin: 40px 0 10px; }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  .box { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 20px 0; }
+  .box p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); overflow-wrap: anywhere; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 48px; border-top: 1px solid var(--line); padding-top: 16px; }
+  footer a { margin-right: 14px; }
+  @media (max-width: 480px) { h1 { font-size: 30px; } .lede { font-size: 18px; } }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #f1e9dc; --muted: #b3a695; --paper: #1e1915; --card: #2a2420; --line: #3c332c; --accent: #e59a3c; }
+  }
 </style>
 </head>
 <body>
 <main>
-  <h1>Thai Vocab</h1>
-  <p>Learn the Thai words you actually need, with real audio.</p>
-  <p><a href="privacy.html">Privacy policy</a> · <a href="mailto:williger09@gmail.com">Contact</a></p>
+  <div class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#c97612"/><path d="M10 20 C 24 20, 28 44, 40 44 S 52 30, 56 26" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg>
+    Dailyvokab
+  </div>
+
+  <h1>Learn the Thai you need for daily life.</h1>
+  <p class="lede">Flashcards, audio and a quick quiz for over 2,000 Thai words and phrases. For iPhone.</p>
+  <p class="soon">Coming soon to the App Store as “Thai Flashcards: Dailyvokab”</p>
+
+  <h2>What you get</h2>
+  <ul>
+    <li><strong>Basics</strong>: 12 units in order. Start here.</li>
+    <li><strong>Words</strong>: 80 units in 15 categories, such as Food &amp; Drink and Getting Around.</li>
+    <li><strong>Phrases</strong>: 16 units, such as Small Talk and Ordering Food &amp; Drinks.</li>
+    <li><strong>Audio for every word and phrase</strong>, in Thai and in English. The audio is an AI voice.</li>
+    <li><strong>See the tones.</strong> Each flashcard draws the tone of every syllable.</li>
+    <li><strong>Three ways to learn each unit</strong>: Flashcards, Audio (press play, then put your phone in your pocket) and a Test Quiz.</li>
+    <li><strong>Smart review</strong> brings back the words you are still learning.</li>
+    <li><strong>Daily word reminders</strong> and the <strong>Word of the hour</strong> widget put a Thai word on your Lock Screen.</li>
+    <li><strong>No internet needed to learn.</strong> Every word and its audio is inside the app.</li>
+  </ul>
+
+  <h2>What is free</h2>
+  <div class="box">
+    <p>Dailyvokab is free to download. The first unit in each of Basics, Words and Phrases is free: three units in all.</p>
+    <p>Dailyvokab Pro opens every unit, and lets you make your own custom units. Pro is a weekly or yearly subscription that renews automatically. The app shows the price before you buy.</p>
+  </div>
+
+  <h2>Help</h2>
+  <p>Questions about the app or your subscription? See <a href="support.html">Support</a> or email <a href="mailto:williger09@gmail.com">williger09@gmail.com</a>.</p>
+
+  <footer>
+    <a href="support.html">Support</a><a href="privacy.html">Privacy policy</a><a href="mailto:williger09@gmail.com">Contact</a>
+    <p>© 2026 Adam Vasica</p>
+  </footer>
 </main>
 </body>
 </html>
