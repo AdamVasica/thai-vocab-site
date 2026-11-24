@@ -31,9 +31,6 @@ export function Landing({ app, art }: { app: LanguageApp; art: ArtMap }) {
               <p className="sub">{app.hero.sub}</p>
               <div className="cta-row">
                 <StoreButton url={app.appStoreUrl} />
-                <span className="free-note">
-                  <b>{app.freeNote.strong}</b> {app.freeNote.rest}
-                </span>
               </div>
             </div>
           </div>
