@@ -117,7 +117,7 @@ export const thai: LanguageApp = {
       label: "Active learning",
       title: "Think you know it? Put yourself to the test.",
       lead: "Find out what you really remember.",
-      points: ["Quick matching quizzes", "Thai words with their English meanings", "A minute is all it takes"],
+      points: ["Quick matching quizzes", "Thai words with their English meanings", "Every word with sound, tap to hear it", "A minute is all it takes"],
       body: "Recognising a word is one thing. Remembering it on your own is another. Challenge yourself with quick matching quizzes that connect Thai words with their English meanings. A minute is all it takes to check your progress and find out what you really remember.",
     },
     {
