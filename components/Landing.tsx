@@ -46,19 +46,21 @@ export function Landing({ app, art }: { app: LanguageApp; art: ArtMap }) {
           </div>
         </section>
 
-        <div className="wrap features">
+        <div className="features">
           {app.features.map((f, i) => {
             const Art = art[f.key];
             const cls = ["feat", `feat-${f.key}`, f.tone ?? "", i % 2 === 1 ? "flip" : ""].filter(Boolean).join(" ");
             return (
               <section className={cls} key={f.key} aria-labelledby={`f-${f.key}`}>
-                <div className="copy">
-                  <span className="label">{f.label}</span>
-                  <h3 id={`f-${f.key}`}>{f.title}</h3>
-                  <p>{f.body}</p>
-                </div>
-                <div className="art" aria-hidden="true">
-                  <Art />
+                <div className="wrap feat-inner">
+                  <div className="copy">
+                    <span className="label">{f.label}</span>
+                    <h3 id={`f-${f.key}`}>{f.title}</h3>
+                    <p>{f.body}</p>
+                  </div>
+                  <div className="art" aria-hidden="true">
+                    <Art />
+                  </div>
                 </div>
               </section>
             );

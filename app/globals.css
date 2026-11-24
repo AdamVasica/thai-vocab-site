@@ -38,7 +38,7 @@ p { margin: 0; }
 .top .wrap { display: flex; align-items: center; height: 72px; }
 .brand { display: flex; align-items: center; gap: 10px; font: 800 19px/1 var(--display); color: var(--hero-ink); text-decoration: none; }
 .brand svg { width: 34px; height: 34px; flex: none; }
-.hero { position: relative; background: #fbe9da url("/hero.jpg") right 18% bottom / cover no-repeat; min-height: 600px; display: flex; align-items: center; }
+.hero { position: relative; background: #fbe9da url("/hero.jpg") right 18% top 30% / cover no-repeat; min-height: clamp(600px, 42vw, 860px); display: flex; align-items: center; }
 .hero .wrap { width: 100%; padding-block: 110px 80px; }
 .hero-copy { max-width: 540px; }
 .hero h1 { color: var(--hero-ink); font-size: clamp(2.5rem, 5.4vw, 4.1rem); line-height: 1.04; }
@@ -58,18 +58,20 @@ p { margin: 0; }
 .thread p { color: var(--muted); font-size: 1.15rem; margin: 16px auto 0; max-width: 34em; }
 
 /* ---------- feature sections ---------- */
-.features { display: grid; gap: 20px; padding-bottom: 20px; }
-.feat { display: grid; grid-template-columns: 1fr 1fr; align-items: center; border-radius: 36px; background: var(--panel); overflow: hidden; min-height: 500px; }
+.features { display: block; }
+.feat { background: var(--bg); overflow: hidden; }
+.feat-inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; min-height: 560px; }
 .feat.alt { background: var(--panel-2); }
+.feat:not(.alt):not(.dark):not(.feat-walk) { background: var(--bg); }
 .feat.dark { background: var(--dark); color: var(--dark-ink); }
 .feat.flip .copy { order: 2; }
-.copy { padding: 64px 56px; min-width: 0; }
+.copy { padding: 96px 0; min-width: 0; }
 .label { display: inline-block; font: 700 13px/1 var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 18px; }
 .feat.dark .label { color: #f5a35c; }
 .copy h3 { font-size: clamp(1.9rem, 3.3vw, 2.7rem); line-height: 1.06; }
 .copy p { color: var(--muted); font-size: 1.08rem; margin-top: 18px; max-width: 30em; }
 .feat.dark .copy p { color: var(--dark-muted); }
-.art { position: relative; min-width: 0; height: 100%; min-height: 420px; display: grid; place-items: center; padding: 40px 32px; }
+.art { position: relative; min-width: 0; height: 100%; min-height: 420px; display: grid; place-items: center; padding: 64px 0; }
 
 /* 1 walking art (picture keeps its own light ground in both themes) */
 .feat.feat-walk { background: #fdeee4; color: #2b2118; }
@@ -176,10 +178,10 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
-  .feat { grid-template-columns: 1fr; min-height: 0; }
+  .feat-inner { grid-template-columns: 1fr; min-height: 0; gap: 0; }
   .feat.flip .copy { order: 0; }
-  .copy { padding: 48px 28px 8px; }
-  .art { min-height: 0; padding: 32px 24px 44px; }
+  .copy { padding: 64px 0 8px; }
+  .art { min-height: 0; padding: 32px 0 56px; }
   .feat.feat-walk .art { padding-bottom: 0; }
 }
 @media (max-width: 760px) {
@@ -187,7 +189,6 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
   .hero .wrap { padding-block: 92px 0; }
   .hero::after { content: ""; display: block; height: 330px; background: url("/hero.jpg") 78% bottom / cover no-repeat; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%); mask-image: linear-gradient(to bottom, transparent, #000 22%); }
   .thread { padding-block: 64px 40px; }
-  .feat { border-radius: 28px; }
 }
 @media (max-width: 520px) {
   .lib { grid-template-columns: 1fr; justify-items: center; }
