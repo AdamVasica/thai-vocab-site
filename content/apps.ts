@@ -17,7 +17,7 @@ export type Feature = {
   body: string;
   lead?: string;
   points?: string[];
-  tone?: "alt" | "dark";
+  tone?: "alt" | "warm";
 };
 
 export type LanguageApp = {
@@ -96,7 +96,7 @@ export const thai: LanguageApp = {
     },
     {
       key: "review",
-      tone: "dark",
+      tone: "warm",
       label: "Long-term memory",
       title: "Remember more. Repeat less.",
       lead: "Smart review brings words back at the right time.",
@@ -109,7 +109,7 @@ export const thai: LanguageApp = {
       label: "Daily habit",
       title: "Make your Lock Screen a little smarter.",
       lead: "Learn a little every time you check your phone.",
-      points: ["Add the Word of the hour widget", "On your Lock Screen or Home Screen", "A new Thai word, every hour"],
+      points: ["Add the Word of the hour widget to your Lock Screen", "A new Thai word, every hour", "Learn without opening the app"],
       body: "Your phone is already part of your day. Now it can help you learn Thai, too. Add the Word of the hour widget and discover a new Thai word right on your Lock Screen or Home Screen. Every time you check your phone, there’s another small opportunity to learn.",
     },
     {

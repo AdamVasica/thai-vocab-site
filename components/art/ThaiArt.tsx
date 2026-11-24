@@ -113,7 +113,7 @@ function Review() {
         <text x="2" y="60" textAnchor="start">Today</text>
         <text x="100" y="60" textAnchor="middle">4 days</text>
         <text x="200" y="60" textAnchor="middle">10 days</text>
-        <text x="428" y="60" textAnchor="end">2 months</text>
+        <text x="428" y="60" textAnchor="end">1 month</text>
       </svg>
       <div className="tl-states"><span className="pill learning">Learning</span><span className="pill known">Remembered</span></div>
     </div>
@@ -122,23 +122,34 @@ function Review() {
 
 function Widget() {
   return (
-    <div className="lock">
-      <div className="date">Monday 24 November</div>
-      <div className="time">9:41</div>
-      <div className="widget">
-        <div className="w1">prûng-níi</div>
-        <div className="w2"><span lang="th">พรุ่งนี้</span>Tomorrow</div>
-      </div>
+    <div className="widget-art">
+      <img src="/img/widget-art.jpg" alt="A girl with headphones next to an iPhone Lock Screen showing the Thai word พรุ่งนี้ prûng-níi, Tomorrow" width={900} height={1159} loading="lazy" decoding="async" />
     </div>
   );
 }
 
 function Quiz() {
   return (
-    <div className="quiz">
-      <div className="qt ok">Thank you</div><div className="link" /><div className="qt ok">kàwp-kun<span lang="th">ขอบคุณ</span></div>
-      <div className="qt">Hospital</div><div /><div className="qt">prûng-níi<span lang="th">พรุ่งนี้</span></div>
-      <div className="qt">Tomorrow</div><div /><div className="qt">roong-pá-yaa-baan<span lang="th">โรงพยาบาล</span></div>
+    <div className="fphone qphone" aria-label="Match the pairs quiz in the app">
+      <div className="fp-status"><span>9:41</span></div>
+      <div className="fp-island" />
+      <div className="qp-bar">
+        <span className="fp-back">‹ Back</span>
+        <span className="qp-title">Test Quiz<small>Unit 14</small></span>
+        <span className="qp-count">1/7</span>
+      </div>
+      <div className="qp-head"><b>Match the pairs</b><span>Round 1 of 2</span></div>
+      <div className="qp-grid">
+        <div className="qp-t ok">✓ Mall</div>
+        <div className="qp-t">kǎwng<span lang="th">ของ</span></div>
+        <div className="qp-t">With / And</div>
+        <div className="qp-t">gàp<span lang="th">กับ</span></div>
+        <div className="qp-t qa">See</div>
+        <div className="qp-t qb">hěn<span lang="th">เห็น</span></div>
+        <div className="qp-t">Thing / Stuff</div>
+        <div className="qp-t ok">✓ hâang<span lang="th">ห้าง</span></div>
+      </div>
+      <div className="qp-hint">Tap a tile to hear it · pair English with its Thai</div>
     </div>
   );
 }
