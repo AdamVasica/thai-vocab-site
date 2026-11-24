@@ -56,7 +56,16 @@ export function Landing({ app, art }: { app: LanguageApp; art: ArtMap }) {
                   <div className="copy">
                     <span className="label">{f.label}</span>
                     <h3 id={`f-${f.key}`}>{f.title}</h3>
-                    <p>{f.body}</p>
+                    {f.points ? (
+                      <>
+                        <p className="lead">{f.lead}</p>
+                        <ul className="ticks">
+                          {f.points.map((pt) => <li key={pt}>{pt}</li>)}
+                        </ul>
+                      </>
+                    ) : (
+                      <p>{f.body}</p>
+                    )}
                   </div>
                   <div className="art" aria-hidden="true">
                     <Art />
