@@ -1,5 +1,5 @@
 import type { FeatureKey } from "@/content/apps";
-import { OfflineIcon, SpeakerIcon } from "../icons";
+import { SpeakerIcon } from "../icons";
 
 // Feature graphics for the Thai app. Every Thai word here is a real card from the app (src/data/*.js).
 // A future language app gets its own file like this one.
@@ -156,14 +156,8 @@ function Quiz() {
 
 function Offline() {
   return (
-    <div className="scene">
-      <div className="sun" />
-      <div className="isle" />
-      <div className="isle two" />
-      <div className="offline"><OfflineIcon />Offline</div>
-      <div className="phone">
-        <img src="/img/flashcard-goodbye.jpg" alt="Dailyvokab flashcard for the Thai word for goodbye" width={1179} height={2556} loading="lazy" decoding="async" />
-      </div>
+    <div className="plane-art">
+      <img src="/img/plane.jpg" alt="A young man in a plane seat with headphones, learning Thai on his phone with no signal" width={1090} height={1160} loading="lazy" decoding="async" />
     </div>
   );
 }

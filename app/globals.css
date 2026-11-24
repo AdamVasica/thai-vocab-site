@@ -292,3 +292,8 @@ span.store-btn { cursor: default; }
 @keyframes qpTh { 0%, 48% { color: #b0560b; } 54%, 92% { color: #6f9e5c; } 100% { color: #b0560b; } }
 .qp-hint { text-align: center; font-size: .52rem; color: #8a7c6c; margin-top: 10px; }
 @media (prefers-reduced-motion: reduce) { .qp-t.qa, .qp-t.qb, .qp-t.qb [lang="th"] { animation: none; } }
+
+/* Offline: learning on a plane (ChatGPT art, background matched) */
+.feat.feat-offline { background: #fdebe6; }
+.plane-art { width: min(100%, 480px); }
+.plane-art img { display: block; width: 100%; height: auto; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent), linear-gradient(transparent, #000 5%, #000 95%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent), linear-gradient(transparent, #000 5%, #000 95%, transparent); mask-composite: intersect; }
