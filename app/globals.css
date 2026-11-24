@@ -1,5 +1,6 @@
 /* Layout: art-backed hero (unchanged), a short thread line, then seven feature sections as big rounded panels alternating copy left/right, each with its own graphic (illustration, app close-up or simple diagram); closing CTA. */
 :root {
+  color-scheme: light;
   --bg: #fdf6ef;
   --surface: #ffffff;
   --ink: #2b2118;
@@ -21,24 +22,6 @@
   --display: var(--font-manrope), "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
   --body: var(--font-manrope), "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
   --thai: var(--font-anuphan), "Anuphan", var(--font-manrope), system-ui, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #1a1410; --surface: #2a221b; --ink: #f5ece2; --muted: #baab9b;
-    --accent: #f5944a; --accent-ink: #f7a965; --panel: #2e2219; --panel-2: #241d17;
-    --dark: #3a2a1c; --dark-ink: #fbf3ea; --dark-muted: #d6c4b0; --line: #3d3128;
-    --good: #7cc68f; --good-tint: #1f3324; --bezel: #000;
-    --shadow: 0 1px 3px rgba(0,0,0,.4), 0 14px 30px -14px rgba(0,0,0,.6);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #1a1410; --surface: #2a221b; --ink: #f5ece2; --muted: #baab9b;
-  --accent: #f5944a; --accent-ink: #f7a965; --panel: #2e2219; --panel-2: #241d17;
-  --dark: #3a2a1c; --dark-ink: #fbf3ea; --dark-muted: #d6c4b0; --line: #3d3128;
-  --good: #7cc68f; --good-tint: #1f3324; --bezel: #000;
-  --shadow: 0 1px 3px rgba(0,0,0,.4), 0 14px 30px -14px rgba(0,0,0,.6);
-  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
