@@ -1,10 +1,5 @@
 export function Logo() {
-  return (
-    <svg viewBox="0 0 64 64" aria-hidden="true">
-      <rect width="64" height="64" rx="14" fill="#ee7a1c" />
-      <path d="M10 20 C 24 20, 28 44, 40 44 S 52 30, 56 26" fill="none" stroke="#fff" strokeWidth="6" strokeLinecap="round" />
-    </svg>
-  );
+  return <img className="logo" src="/logo.png" alt="" width={34} height={34} />;
 }
 
 export function AppleIcon() {

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: SITE.name,
-    title: "Order food. Get around. Talk to people. Learn Thai with Dailyvokab",
+    title: "Every word you learn is one more thing you can say | Dailyvokab",
     description: app.seo.description,
     locale: "en_US",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Dailyvokab: learn the Thai words you’ll use every day" }],

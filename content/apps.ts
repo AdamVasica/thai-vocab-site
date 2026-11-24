@@ -56,9 +56,9 @@ export const thai: LanguageApp = {
     ],
   },
   hero: {
-    lead: "Order food. Get around.",
-    highlight: "Talk to people.",
-    sub: "Learn the Thai words you’ll use every day. Hear every word, see every tone, and keep learning with your phone in your pocket.",
+    lead: "Every word you learn is",
+    highlight: "one more thing you can say.",
+    sub: "Over 2,000 Thai words and phrases. Tap through flashcards, or just listen with your phone in your pocket.",
   },
   freeNote: {
     strong: "Free to start.",
