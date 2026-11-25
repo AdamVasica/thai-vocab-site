@@ -297,3 +297,29 @@ span.store-btn { cursor: default; }
 .feat.feat-offline { background: #fdebe6; }
 .plane-art { width: min(100%, 480px); }
 .plane-art img { display: block; width: 100%; height: auto; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent), linear-gradient(transparent, #000 5%, #000 95%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent), linear-gradient(transparent, #000 5%, #000 95%, transparent); mask-composite: intersect; }
+
+/* ---------- phones: tighter rhythm, smaller mockups, sticky download bar ---------- */
+.mcta { display: none; }
+@media (max-width: 760px) {
+  .mcta { display: flex; align-items: center; gap: 10px; position: fixed; z-index: 20; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); padding: 9px 9px 9px 10px; background: rgba(255,250,245,.94); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-radius: 18px; box-shadow: 0 10px 30px -8px rgba(60,35,10,.35), 0 0 0 1px rgba(60,35,10,.06); transform: translateY(140%); opacity: 0; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .25s; pointer-events: none; }
+  .mcta.on { transform: none; opacity: 1; pointer-events: auto; }
+  .mcta-logo .logo { width: 38px; height: 38px; border-radius: 10px; display: block; }
+  .mcta-txt { flex: 1; min-width: 0; line-height: 1.15; color: #2b2118; }
+  .mcta-txt b { display: block; font: 800 15px/1.15 var(--display); }
+  .mcta-txt small { display: block; font: 600 12.5px/1.2 var(--body); color: #6f6257; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mcta-btn { display: inline-flex; align-items: center; gap: 6px; background: #1b140e; color: #fff; text-decoration: none; font: 700 14px/1 var(--body); padding: 11px 14px 11px 12px; border-radius: 12px; flex: none; }
+  .mcta-btn svg { width: 17px; height: 17px; }
+}
+@media (max-width: 520px) {
+  .copy { padding: 52px 0 4px; }
+  .art { padding: 24px 0 44px; }
+  .copy h3 { font-size: 1.85rem; }
+  .ticks li { font-size: 1rem; }
+  .fphone { zoom: .84; }
+  .lib { gap: 26px; }
+  .cats { width: min(100%, 330px); grid-template-columns: 1fr 1fr; gap: 8px; }
+  .count { grid-column: 1 / -1; text-align: center; font-size: 2.6rem; margin-bottom: 4px; }
+  .cat { padding: 10px 12px; font-size: .88rem; gap: 6px; }
+  .tone-card, .timeline { width: 100%; }
+  .close { padding-block: 64px 72px; }
+}

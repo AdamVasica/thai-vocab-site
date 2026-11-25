@@ -4,6 +4,7 @@ import { SITE } from "@/content/site";
 import { Logo } from "./icons";
 import { StoreButton } from "./StoreButton";
 import { LanguagePicker } from "./LanguagePicker";
+import { MobileCta } from "./MobileCta";
 
 type ArtMap = Record<FeatureKey, () => React.JSX.Element>;
 
@@ -92,6 +93,7 @@ export function Landing({ app, art }: { app: LanguageApp; art: ArtMap }) {
           </span>
         </div>
       </footer>
+      <MobileCta url={app.appStoreUrl} name={SITE.name} tagline={`Learn ${app.language} words`} />
     </>
   );
 }
