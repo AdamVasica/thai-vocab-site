@@ -29,6 +29,8 @@ export const metadata: Metadata = {
     images: ["/og.jpg"],
   },
   robots: { index: true, follow: true },
+  // iPhone Safari shows a "Get" banner for the app at the top of the page (only once the app is live).
+  ...(app.appStoreUrl ? { itunes: { appId: app.appStoreUrl.match(/id(\d+)/)?.[1] ?? "" } } : {}),
 };
 
 export default function Home() {
