@@ -132,7 +132,7 @@ export const thai: LanguageApp = {
   ],
   close: {
     title: "Start learning Thai.",
-    body: "The first unit of Basics, Words and Phrases is free. Unlock every unit with Dailyvokab Pro.",
+    body: "A few minutes a day is enough to start. Busy day? Just put your earphones in and listen.",
   },
 };
 
