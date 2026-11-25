@@ -223,7 +223,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
 @media (max-width: 760px) {
   .hero { display: block; min-height: 0; background: #fbe9da; }
   .hero .wrap { padding-block: 92px 0; }
-  .hero::after { content: ""; display: block; height: 330px; background: url("/hero.jpg") 78% bottom / cover no-repeat; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%); mask-image: linear-gradient(to bottom, transparent, #000 22%); }
+  .hero-pic { display: block; position: relative; height: 330px; background: url("/hero.jpg") 78% bottom / cover no-repeat; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%); mask-image: linear-gradient(to bottom, transparent, #000 22%); }
   .thread { padding-block: 64px 40px; }
 }
 @media (max-width: 520px) {
@@ -323,3 +323,24 @@ span.store-btn { cursor: default; }
   .tone-card, .timeline { width: 100%; }
   .close { padding-block: 64px 72px; }
 }
+
+/* ---------- phones: hero "listen" scene (sound from his headphones, English then Thai) ---------- */
+.hero-pic { display: none; }
+@media (max-width: 760px) {
+  .hero-pic { display: block; }
+  /* the picture is 650px wide at 330px high, placed at 78%: his left earphone sits ~364px into it */
+  .hl-wave { position: absolute; top: 58px; left: calc((100% - 650px) * .78 + 364px); width: 60px; height: 70px; transform: scaleX(-1); }
+  .hl-wave path { fill: none; stroke: #ee7a1c; stroke-width: 3; stroke-linecap: round; opacity: 0; animation: hlWave 1.8s ease-out infinite; }
+  .hl-wave path:nth-child(2) { animation-delay: .3s; } .hl-wave path:nth-child(3) { animation-delay: .6s; }
+  .hl-bub { position: absolute; left: 16px; display: flex; align-items: center; gap: 8px; background: #fff; color: #2b2118; border-radius: 16px; padding: 8px 13px; box-shadow: 0 8px 22px -10px rgba(60,35,10,.38); font-weight: 800; font-size: 15px; white-space: nowrap; opacity: 0; animation: hlBub 9s infinite; }
+  .hl-bub svg { width: 16px; height: 16px; color: #ee7a1c; flex: none; }
+  .hl-bub [lang="th"] { color: #b0560b; font-weight: 600; }
+  .hl-en { top: 92px; } .hl-th { top: 140px; }
+  .hl-en.hl-0 { animation-delay: 0s; } .hl-th.hl-0 { animation-delay: 1.1s; }
+  .hl-en.hl-1 { animation-delay: 4.5s; } .hl-th.hl-1 { animation-delay: 5.6s; }
+  .hl-tag { position: absolute; left: 16px; top: 212px; display: flex; align-items: center; gap: 8px; font: 800 13px/1.2 var(--body); color: #5e4632; background: rgba(255,247,240,.88); padding: 7px 11px; border-radius: 12px; }
+  .hl-tag svg { width: 16px; height: 16px; color: #ee7a1c; }
+}
+@keyframes hlWave { 0% { opacity: 0; } 30% { opacity: .9; } 100% { opacity: 0; } }
+@keyframes hlBub { 0% { opacity: 0; transform: translateX(14px) scale(.92); } 5%, 40% { opacity: 1; transform: none; } 46%, 100% { opacity: 0; transform: translateY(-8px); } }
+@media (prefers-reduced-motion: reduce) { .hl-wave path, .hl-bub { animation: none; } .hl-wave path { opacity: .8; } .hl-bub.hl-0 { opacity: 1; } }

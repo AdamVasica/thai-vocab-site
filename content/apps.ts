@@ -28,6 +28,8 @@ export type LanguageApp = {
   appStoreUrl: string | null; // null until the app is live
   seo: { title: string; description: string; keywords: string[] };
   hero: { lead: string; highlight: string; sub: string };
+  // Phones only: two word pairs that pop up next to the hero picture (real cards from the app) + a short tag.
+  heroListen: { words: { en: string; th: string; rom: string }[]; tag: string };
   freeNote: { strong: string; rest: string };
   thread: { title: string; body: string };
   features: Feature[];
@@ -54,6 +56,13 @@ export const thai: LanguageApp = {
       "learn Thai app",
       "Thai for beginners",
     ],
+  },
+  heroListen: {
+    words: [
+      { en: "Hello", th: "สวัสดี", rom: "sà-wàt-dii" },
+      { en: "Thank you", th: "ขอบคุณ", rom: "kàwp-kun" },
+    ],
+    tag: "Watch or just listen",
   },
   hero: {
     lead: "Every word you learn is",

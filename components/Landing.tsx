@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { FeatureKey, LanguageApp } from "@/content/apps";
 import { SITE } from "@/content/site";
-import { Logo } from "./icons";
+import { Logo, SpeakerIcon } from "./icons";
 import { StoreButton } from "./StoreButton";
 import { LanguagePicker } from "./LanguagePicker";
 import { MobileCta } from "./MobileCta";
@@ -34,6 +34,19 @@ export function Landing({ app, art }: { app: LanguageApp; art: ArtMap }) {
                 <StoreButton url={app.appStoreUrl} />
               </div>
             </div>
+          </div>
+          <div className="hero-pic" aria-hidden="true">
+            <svg className="hl-wave" viewBox="0 0 60 70"><path d="M8 25 Q16 35 8 45" /><path d="M18 17 Q32 35 18 53" /><path d="M28 9 Q48 35 28 61" /></svg>
+            {app.heroListen.words.map((w, i) => (
+              <span key={w.en}>
+                <span className={`hl-bub hl-en hl-${i}`}><SpeakerIcon />{w.en}</span>
+                <span className={`hl-bub hl-th hl-${i}`}><span lang="th">{w.th}</span>{w.rom}</span>
+              </span>
+            ))}
+            <span className="hl-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2" /><rect x="2" y="14" width="5" height="7" rx="2" /><rect x="17" y="14" width="5" height="7" rx="2" /></svg>
+              {app.heroListen.tag}
+            </span>
           </div>
         </section>
 
