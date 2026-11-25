@@ -86,9 +86,6 @@ export function Landing({ app, art }: { app: LanguageApp; art: ArtMap }) {
 
       <footer>
         <div className="wrap">
-          <span>
-            © 2026 {SITE.owner} · {SITE.name} for iPhone · The audio is an AI voice.
-          </span>
           <span className="foot-links">
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>
