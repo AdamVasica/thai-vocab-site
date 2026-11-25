@@ -39,7 +39,7 @@ export const thai: LanguageApp = {
   path: "/",
   language: "Thai",
   storeName: "Thai Flashcards: Dailyvokab",
-  appStoreUrl: null, // after release: "https://apps.apple.com/app/id6791191367"
+  appStoreUrl: "https://apps.apple.com/app/id6791191367",
   seo: {
     title: "Learn Thai Words with Audio and Tones | Dailyvokab for iPhone",
     description:
